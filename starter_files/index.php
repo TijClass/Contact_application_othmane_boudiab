@@ -39,6 +39,54 @@
           </form>
           </div>
       </div>
+      <div class="tbl">
+      <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Firstname</th>
+      <th scope="col">Lastname</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Adress</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Groupe</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>Mark@mdo.com</td>
+      <td>San Francisco 01</td>
+      <td>0607757802</td>
+      <td>Family</td>
+      <td><a href="#">Edit</a><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>Thornton@fat.com</td>
+      <td>San Francisco 02</td>
+      <td>0637759012</td>
+      <td>Friend</td>
+      <td><a href="#">Edit</a><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>Bird</td>
+      <td>Bird@twitter.com</td>
+      <td>San Francisco 03</td>
+      <td>0607958832</td>
+      <td>Business</td>
+      <td><a href="#">Edit</a><a href="#"><i class="fas fa-trash-alt"></i></a></td>
+    </tr>
+  </tbody>
+</table>
+      </div>
   </div>
 </div>
 

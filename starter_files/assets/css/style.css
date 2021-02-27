@@ -184,3 +184,20 @@ header h2 {
     background-color: #6B42BD;
 }
 
+.modal-body {
+    background-color: #fff;
+}
+
+.inp-chk {
+    color: black;
+}
+
+.btn-sub {
+    background-color: #BA9DF2;
+    border: none;
+    border-radius: 50px;
+}
+
+.btn-sub:hover {
+    background-color: #402770;
+}

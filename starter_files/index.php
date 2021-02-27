@@ -25,11 +25,45 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <form onsubmit="return false;">
+            <div class="form-group">
+                <input id="firstNameInput" type="text" placeholder="First Name" class="form-control">  
+            </div>
+            <div class="form-group">
+                <input id="lastNameInput" type="text" placeholder="Last Name" class="form-control">  
+            </div>
+            <div class="form-group">
+                <input id="emailInput" type="email" placeholder="Email" class="form-control">  
+            </div>
+            <div class="form-group">
+                <input id="adressInput" type="text" placeholder="Adress" class="form-control">  
+            </div>
+            <div class="form-group">
+                <input id="phoneInput" type="number" placeholder="Phone" class="form-control">  
+            </div>
+            <!-- RADIO -->
+            <div class="form-group">
+            <label class="inp-chk">
+                <input type="radio" name="pets" checked value="feline"> Family
+            </label>
+            <label class="inp-chk">
+                <input type="radio" name="pets" value="canine"> Friend
+            </label>
+            <label class="inp-chk">
+                <input type="radio" name="pets" value="canine"> Business
+            </label>
+            </div>
+            
+            
+            <!-- TEXTAREA -->
+            <div class="form-group">
+            <textarea class="form-control" rows="2" placeholder="Message"></textarea>  
+            </div>
+        </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+        <button type="button" class="btn btn-primary btn-sub">Submit</button>
       </div>
     </div>
   </div>

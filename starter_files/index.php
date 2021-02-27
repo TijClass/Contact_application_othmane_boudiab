@@ -15,12 +15,31 @@
 <body>
 <div class="container">
   <header>
-        <nav class="navbar-admin d-flex justify-content-between">
+        <nav class="d-flex justify-content-between">
             <h1>YOU<span class="logo">CO</span></h1>
             <input type="submit" class="btn logout" value="Logout">
         </nav>
         <h2>MyWebAdmin</h2>
   </header>
+  <div class="container">
+      <div class="navbar-tab d-flex justify-content-between">
+          <div class="tit">
+            <h3>Contact List</h3>
+          </div>
+          <div class="search-add ">
+          <form class="navbar-form d-flex justify-content-between" role="search">
+            <div class="input-group ">
+                <input type="text" class="form-control inpsch" placeholder="Search" name="q">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <div class="add">
+                <input type="submit" class="btn logout" value="add">
+            </div>
+          </form>
+          </div>
+      </div>
+  </div>
 </div>
 
 </body>

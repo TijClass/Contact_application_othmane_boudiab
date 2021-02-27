@@ -140,3 +140,28 @@ body {
 header h2 {
     text-align: center;
 }
+
+.sch {
+    width: 20%;
+}
+
+.tit {
+
+}
+
+.search-add .navbar-form .input-group .inpsch{
+    width: 150px;
+    border-radius: 50px;
+    background-color: #BA9DF2;
+    color: #fff;
+
+}
+
+.search-add .navbar-form .input-group i {
+    margin-right: 20px;
+    background-color: #BA9DF2;
+    padding: 10px 10px 0 10px;
+    border-radius: 0 50px 50px 0;
+    height: 36px;
+}
+

@@ -119,3 +119,24 @@ body {
 /* end login page */
 
 /* start login page */
+
+.container {
+    margin-top: 2%;
+  }
+
+.logout {
+    margin-top: .8%;
+    height: 30px;
+    background-color: #6B42BD;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 50px;
+}
+
+.logout:hover {
+    background-color: #BA9DF2;
+}
+
+header h2 {
+    text-align: center;
+}

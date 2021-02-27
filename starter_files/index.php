@@ -10,9 +10,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
     <title>Add_person</title>
 </head>
 <body>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content c-modl">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Person</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <header>
         <nav class="d-flex justify-content-between">
@@ -34,7 +56,9 @@
             </div>
 
             <div class="add">
-                <input type="submit" class="btn logout" value="add">
+                <!-- <input type="submit" class="btn logout"  data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
+                <button type="button" class="btn logout" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                add</button>
             </div>
           </form>
           </div>

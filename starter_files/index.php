@@ -1,3 +1,5 @@
+<?php include('add_person.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +27,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form onsubmit="return false;">
+        <form action="add_person.php" method="$_POST" onsubmit="return false;">
             <div class="form-group">
                 <input id="firstNameInput" type="text" placeholder="First Name" class="form-control">  
             </div>

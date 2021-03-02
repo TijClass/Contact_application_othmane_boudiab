@@ -31,7 +31,7 @@
                 </div>
                 <div class="col-md-6 login-form-2">
                     <h3>Login :</h3>
-                    <form>
+                    <form action="" method="$_POST">
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Your Email *" value="" />
                         </div>

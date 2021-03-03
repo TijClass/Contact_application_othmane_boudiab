@@ -201,3 +201,9 @@ header h2 {
 .btn-sub:hover {
     background-color: #402770;
 }
+
+.btnedit {
+    background: none;
+    border: none;
+    color: #6B42BD;
+}

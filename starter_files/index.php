@@ -1,4 +1,13 @@
-<?php include('add_person.php'); ?>
+<?php
+session_start();
+  if ( !$_SESSION['login']){
+    header('Location: login.php');
+    // print_r($_SESSION);
+    die;
+  }
+  include('add_person.php');
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,7 +87,7 @@
   <div class="modal-dialog ">
     <div class="modal-content c-modl">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Person</h5>
+        <h5 class="modal-title" id="exampleModalLabel">edit Person</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -120,14 +129,33 @@
             <button type="submit" name="updatedata" class="btn btn-primary btn-sub">Edit</button>
         </form>
       </div>
-      <div class="modal-footer">
-        <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
-        <!-- <button type="submit" name="addperson" class="btn btn-primary btn-sub">Submit</button> -->
       </div>
     </div>
   </div>
 </div>
 <!-- end model edit -->
+
+<!-- start Modal delet -->
+<div class="modal fade" id="deletmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog ">
+    <div class="modal-content c-modl">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">delete Person</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="delete.php" method="POST">
+          <input type="hidden" name="delet_id" id="delet_id">
+            <h4 class="titldelet">Do you want to delete this data</h4>
+            
+            <button type="submit" name="deletedata" class="btn btn-primary btn-sub">Delete</button>
+        </form>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end model delet -->
 
 
 
@@ -135,7 +163,7 @@
   <header>
         <nav class="d-flex justify-content-between">
             <h1>YOU<span class="logo">CO</span></h1>
-            <input type="submit" class="btn logout" value="Logout">
+            <a href="logout.php" class="logout">logout</a>
         </nav>
         <h2>MyWebAdmin</h2>
   </header>
@@ -152,7 +180,6 @@
             </div>
 
             <div class="add">
-                <!-- <input type="submit" class="btn logout"  data-bs-toggle="modal" data-bs-target="#exampleModal"> -->
                 <button type="button" class="btn logout" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 add</button>
             </div>
@@ -198,29 +225,9 @@
       <td>
       <button type="button" class="btn btnedit">Edit</button>
       <!-- <a href="#">Edit</a> -->
-      <a href="#"><i class="fas fa-trash-alt"></i></a>
+      <button type="button" class="btn btndelet "><i class="fas fa-trash-alt"></i></button>
       </td>
     </tr>
-    <!-- <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>Thornton@fat.com</td>
-      <td>San Francisco 02</td>
-      <td>0637759012</td>
-      <td>Friend</td>
-      <td><a href="#">Edit</a><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>Bird</td>
-      <td>Bird@twitter.com</td>
-      <td>San Francisco 03</td>
-      <td>0607958832</td>
-      <td>Business</td>
-      <td><a href="#">Edit</a><a href="#"><i class="fas fa-trash-alt"></i></a></td>
-    </tr> -->
   </tbody>
   <?php
           }
@@ -237,6 +244,25 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
 <script>
+
+$(document).ready(function() {
+    $('.btndelet').on('click', function() {
+      $('#deletmodal').modal('show');
+
+      $tr = $(this).closest('tr');
+
+      var data = $tr.children("td").map(function(){
+        return $(this).text();
+      }).get();
+      console.log(data);
+
+      $('#delet_id').val(data[0]);
+     
+    });
+  });
+
+
+
   $(document).ready(function() {
     $('.btnedit').on('click', function() {
       $('#editmodal').modal('show');
@@ -259,4 +285,4 @@
   });
 </script>
 </body>
-</html>
+</html> -->

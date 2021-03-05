@@ -125,6 +125,7 @@ body {
   }
 
 .logout {
+    text-decoration: none;
     margin-top: .8%;
     height: 30px;
     background-color: #6B42BD;
@@ -203,7 +204,24 @@ header h2 {
 }
 
 .btnedit {
+    color: #6B42BD;
+}
+
+.btndelet:hover{
+    color: #e40044;
+}
+
+.titldelet{
+    color: #e40044;
+    padding-bottom: 40px;
+}
+ 
+.btndelet .btnedit{
     background: none;
     border: none;
-    color: #6B42BD;
+}
+
+.btn-primary:hover{
+    background: #e40044;
+    
 }

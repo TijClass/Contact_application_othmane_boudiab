@@ -1,3 +1,61 @@
+<?php 
+$connection = mysqli_connect("localhost","root","",'contactinfo');
+
+    session_start();
+
+    if(isset($_POST['login']))
+    {
+        extract($_POST);
+        $email = $_POST['email'];
+        $password=$_POST['password'];
+        $sql= "SELECT * FROM `loginuser` WHERE `loginuser`.`email`='$email'";
+        $query = mysqli_query($connection,$sql);
+        // $query_run = mysqli_num_rows($query);
+        // die($query_run);
+        if(mysqli_num_rows($query) != 0)
+        {
+                $ligne=mysqli_fetch_assoc($query);
+                
+                }
+                if($password == $ligne['password']){
+                    $_SESSION['email']=$ligne["email"];
+                    $_SESSION['login'] = true;
+                    header('Location: index.php');
+                    
+            // $_SESSION['password']=$password;
+            // header('Location: index.php');
+        }
+        else
+        {
+            // die("SELECT * FROM login WHERE email='$email' AND password='$password'");
+            echo '<script> alert("login in failed"); </script>';
+        }
+    }
+        
+
+
+
+// if(isset($_POST['login']))
+// {
+//     $email = $_POST['email'];
+//     $password = $_POST['password'];
+
+//     $query = "SELECT * FROM `login` WHERE `email`='$email' AND `password`='$password'";
+//     $query_run = mysqli_query($connection, $query);
+
+//     if(mysqli_fetch_array($query_run)>0)
+//     {
+//         echo '<script> alert("login in success"); </script>';
+//         header('Location: index.php');
+//     }
+//     else
+//     {
+//         echo '<script> alert("login in failed"); </script>';
+//         header('Location: login.php');
+//     }
+// }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,15 +89,16 @@
                 </div>
                 <div class="col-md-6 login-form-2">
                     <h3>Login :</h3>
-                    <form action="" method="$_POST">
+                    <form action="login.php" method="POST">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Email *" value="" />
+                            <input type="text" name="email" class="form-control" placeholder="Your Email *" value="" />
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Your Password *" value="" />
+                            <input type="password" name="password" class="form-control" placeholder="Your Password *" value="" />
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btnSubmit" value="Login" />
+                            <button type="submit" class="btnSubmit" name="login">Login</button>
+                            <!-- <input type="submit" class="btnSubmit" name="login" value="Login" /> -->
                             <input type="checkbox" name="remember_me" id="remember_me" class="remember_check">
 							<label class="remember" for="remember_me">Remember Me!</label>
                         </div>

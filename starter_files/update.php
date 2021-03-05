@@ -1,6 +1,5 @@
 <?php
 $connection = mysqli_connect("localhost","root","",'contactinfo');
-// $db = mysqli_select_db($connection,'contactinfo');
 
 if(isset($_POST['updatedata']))
 {

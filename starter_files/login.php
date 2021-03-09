@@ -3,7 +3,7 @@ $connection = mysqli_connect("localhost","root","",'contactinfo');
 
     session_start();
 
-    if(isset($_POST['login']))
+    if(isset($_POST['login']) and !empty($_POST['email']) and !empty($_POST['password']))
     {
         extract($_POST);
         $email = $_POST['email'];
@@ -27,6 +27,7 @@ $connection = mysqli_connect("localhost","root","",'contactinfo');
         }
         else
         {
+
             // die("SELECT * FROM login WHERE email='$email' AND password='$password'");
             echo '<script> alert("login in failed"); </script>';
         }

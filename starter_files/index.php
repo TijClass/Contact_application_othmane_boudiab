@@ -249,9 +249,9 @@ $(document).ready(function() {
     $('.btndelet').on('click', function() {
       $('#deletmodal').modal('show');
 
-      $tr = $(this).closest('tr');
+      tr = $(this).closest('tr');
 
-      var data = $tr.children("td").map(function(){
+      var data = tr.children("td").map(function(){
         return $(this).text();
       }).get();
       console.log(data);
@@ -267,9 +267,9 @@ $(document).ready(function() {
     $('.btnedit').on('click', function() {
       $('#editmodal').modal('show');
 
-      $tr = $(this).closest('tr');
+      tr = $(this).closest('tr');
 
-      var data = $tr.children("td").map(function(){
+      var data = tr.children("td").map(function(){
         return $(this).text();
       }).get();
       console.log(data);

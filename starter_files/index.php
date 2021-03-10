@@ -189,7 +189,7 @@ session_start();
       <div class="tbl">
       <?php
           $connection = mysqli_connect("localhost","root","",'contactinfo');
-          $db = mysqli_select_db($connection,'contactinfo');
+          
 
           $query = "SELECT * FROM `user`";
           $query_run = mysqli_query($connection, $query);
